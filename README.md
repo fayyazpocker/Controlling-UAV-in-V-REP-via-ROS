@@ -2,22 +2,22 @@
 A drone model in V-REP can be controlled using ROS commands in terms of pitch, roll, throttle and yaw.
 
 Follow the steps to control drone in V-REP using ROS
-- Run **roscore** by typing the following command in your terminal:
+-Run **roscore** by typing the following command in your terminal:
 ```
 roscore
 ```
-2. Launch the simulator by typing ```./vrep.sh``` in the V-REP directory and check if RosInterface is loaded properly
-3. Drag and drop **uav.ttm** in the scene
-4. On running simulation, you can find the following topics 
+-Launch the simulator by typing ```./vrep.sh``` in the V-REP directory and check if RosInterface is loaded properly
+-Drag and drop **uav.ttm** in the scene
+-On running simulation, you can find the following topics 
 ```/drone_command /drone_yaw```
 
 “```/drone_command```” is a topic subscribed by the uav model. It commands the drone’s motion in terms of roll, pitch, yaw and throttle.
 “```/drone_yaw```” is a topic published by the uav model. It indicates the drone’s orientation about the z-axis with respect to the V-REP world.
-5. Check the structure of the message of ```/drone_command``` using the following command:
+-Check the structure of the message of ```/drone_command``` using the following command:
 ```
 rostopic type /drone_command | rosmsg show
 ```
-6. Check the structure of the message of ```/drone_yaw``` using the following command:
+-Check the structure of the message of ```/drone_yaw``` using the following command:
 ```
 rostopic type /drone_yaw | rosmsg show
 ```
