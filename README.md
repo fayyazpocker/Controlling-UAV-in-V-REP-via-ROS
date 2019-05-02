@@ -9,7 +9,7 @@ roscore
 - Launch the simulator by typing ```./vrep.sh``` in the V-REP directory and check if RosInterface is loaded properly
 - Drag and drop **uav.ttm** in the scene
 - On running simulation, you can find the following topics 
-```/drone_command /drone_yaw```
+```/drone_command``` and ``` /drone_yaw```
 
 “```/drone_command```” is a topic subscribed by the uav model. It commands the drone’s motion in terms of roll, pitch, yaw and throttle.
 “```/drone_yaw```” is a topic published by the uav model. It indicates the drone’s orientation about the z-axis with respect to the V-REP world.
