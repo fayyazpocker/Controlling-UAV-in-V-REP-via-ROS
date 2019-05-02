@@ -2,7 +2,7 @@
 A drone model in V-REP can be controlled using ROS commands in terms of pitch, roll, throttle and yaw.
 
 Follow the steps to control drone in V-REP using ROS
-1. Run roscore by typing the following command in your terminal:
+- Run roscore by typing the following command in your terminal:
 roscore
 2. Launch the simulator by typing ./vrep.sh in the V-REP directory and check if RosInterface is loaded properly
 3. Drag and drop uav.ttm in the scene
