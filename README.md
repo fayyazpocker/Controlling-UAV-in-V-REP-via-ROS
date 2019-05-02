@@ -27,9 +27,7 @@ rostopic type /drone_yaw | rosmsg show
 
 The condition to arm the drone is ***rcThrottle = 1000*** (minimum value) and ***rcAUX4 ≥ 1300***. To test arming the drone model, publish the following message to the topic “```/drone_command```” by typing the command:
 ```
-rostopic pub /drone_command plutodrone/PlutoMsg "{rcRoll: 1500,
-rcPitch: 1500, rcYaw: 1500, rcThrottle: 1000, rcAUX1: 0, rcAUX2:
-0, rcAUX3: 0, rcAUX4: 1500}"
+rostopic pub /drone_command plutodrone/PlutoMsg "{rcRoll: 1500, rcPitch: 1500, rcYaw: 1500, rcThrottle: 1000, rcAUX1: 0, rcAUX2: 0, rcAUX3: 0, rcAUX4: 1500}"
 ```
 This should now arm the drone. A message should pop on the V-REP window which says “ARMED” and the propellers should start rotating
 
@@ -38,9 +36,7 @@ This should now arm the drone. A message should pop on the V-REP window which sa
 
 The condition for the drone to take-off is ***rcThrottle ≥ 1500***, after arming. To test the drone’s take-off, publish the following message to increase the throttle:
 ```
-rostopic pub /drone_command plutodrone/PlutoMsg "{rcRoll: 1500,
-rcPitch: 1500, rcYaw: 1500, rcThrottle: 1500, rcAUX1: 0, rcAUX2:
-0, rcAUX3: 0, rcAUX4: 1500}"
+rostopic pub /drone_command plutodrone/PlutoMsg "{rcRoll: 1500, rcPitch: 1500, rcYaw: 1500, rcThrottle: 1500, rcAUX1: 0, rcAUX2: 0, rcAUX3: 0, rcAUX4: 1500}"
 ```
 The drone should now steadily rise until a new command is given.
 
@@ -50,9 +46,7 @@ A disarmed drone means the drone is in a mode that will not take any commands fr
 The condition to disarm the drone is ***rcAUX4 ≤ 1200***. To test disarming the drone model, publish the following
 message to the topic “```/drone_command```” by typing the command:
 ```
-rostopic pub /drone_command plutodrone/PlutoMsg "{rcRoll: 1500,
-rcPitch: 1500, rcYaw: 1500, rcThrottle: 1000, rcAUX1: 0, rcAUX2:
-0, rcAUX3: 0, rcAUX4: 1200}"
+rostopic pub /drone_command plutodrone/PlutoMsg "{rcRoll: 1500,rcPitch: 1500, rcYaw: 1500, rcThrottle: 1000, rcAUX1: 0, rcAUX2: 0, rcAUX3: 0, rcAUX4: 1200}"
 ```
 The drone should now be disarmed. A message should pop on the V-REP window which says “DISARMED” and the propellers should stop rotating.
 
